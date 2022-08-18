@@ -3,6 +3,9 @@ const hbs = require('express-handlebars')
 
 const locationRoutes = require('./routes/locations')
 
+const userRoutes = require('./routes/events')
+
+
 const server = express()
 
 // Middleware
