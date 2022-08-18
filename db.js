@@ -3,8 +3,6 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers,
   getAlllocations,
   getEvents,
   getEventbyId,
