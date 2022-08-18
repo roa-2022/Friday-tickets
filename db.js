@@ -14,3 +14,5 @@ function getUsers(db = connection) {
 function getUser(id, db = connection) {
   return db('users').where('id', id).first()
 }
+
+
