@@ -4,7 +4,8 @@ const connection = require('knex')(config)
 
 module.exports = {
   getEvents,
-  getEventbyId
+  getEventbyId,
+  updateEvent
 }
 
 function getEvents(db = connection) {
@@ -20,3 +21,15 @@ function getEventbyId(id, db = connection){
   .where('events.id', id)
   .first()
 }
+
+function updateEvent(id, eventTitle, eventDate, locationId,eventDescription, db = connection){
+  return db('events')
+  .update({
+    name: eventTitle,
+    location_id: locationId,
+    date: eventDate,
+    description: eventDescription
+   })
+  .where('events.id', id)
+}
+
