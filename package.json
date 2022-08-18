@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "dependencies": {
-    "sqlite3": "^5.0.8",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
-    "knex": "^2.1.0",
-    "nodemon": "^2.0.15"
+    "knex": "^2.2.0",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.8"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.11.3",
