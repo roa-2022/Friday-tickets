@@ -9,7 +9,8 @@ exports.up = function(knex) {
     table.string('type')
     table.integer('price')
     table.date('date')
-    table.time('time')
+    table.integer('location_id')
+    table.string('description')  
   })
 };
 
