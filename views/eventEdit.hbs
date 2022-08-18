@@ -1,10 +1,10 @@
 <div class="event-container">
   <div class="event">
-    <form action="/event{{id}}/edit" method="POST">
+    <form action="/event/{{id}}/edit" method="POST">
 
     <div class="input-container">
       <label for="eventTitle">Title</label>
-      <input type="text" value={{event.name}} id="eventTitle" name="eventTitle">
+      <input type="text" value='{{event_name}}  'id="eventTitle" name="eventTitle">
     </div>
 
      <div class="input-container">
@@ -17,14 +17,16 @@
       </div>
 
     <div class="input-container">
-      <label for="eventDate">Title</label>
-      <input type="text" value={{event.date}} id="eventDate" name="eventDate">
+      <label for="eventDate">Date: </label>
+      <input type="text" value='{{date}}' id="eventDate" name="eventDate">
     </div>
 
     <div class="input-container">
-        <label for="eventDescription">Event Title</label>
-        <textarea rows="3" type="text" value={{event.description}} id="eventDescription" name="eventDescription">
-    </div>  
+        <label for="eventDescription">Event Description: </label>
+        <textarea rows="13" type="text" id="eventDescription" name="eventDescription">{{description}}</textarea>
+    </div> 
+    <input type="submit" name="" value="Submit">
+
     </form>
   </div>
-</div>
+    </div>
