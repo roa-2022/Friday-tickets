@@ -2,7 +2,7 @@ const express = require('express')
 const hbs = require('express-handlebars')
 const path = require('path')
 
-const userRoutes = require('./routes/users')
+const userRoutes = require('./routes/events')
 
 const server = express()
 
