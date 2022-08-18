@@ -15,6 +15,7 @@ function getEvents(db = connection) {
   .select('*','events.name AS event_name', 'locations.id AS location_id', 'locations.name AS location_name')
 }
 
+
 function getEventbyId(id, db = connection){
   return db('events')
   .join('locations','events.location_id','locations.id')
