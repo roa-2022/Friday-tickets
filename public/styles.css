@@ -109,3 +109,28 @@ a {
   color: white;
   border: none;
 }
+
+
+/* events page */
+
+.events-container {
+  margin-top: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  gap: 2em;
+}
+
+.event {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
