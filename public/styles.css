@@ -154,16 +154,21 @@ a {
   background-color: red;
   color: white;
   width: 100%;
+  border-radius: 10px 10px 0 0;
   height: 75px;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  
+}
+.event-title-container input {
+  width: 80%;
 }
 
 .input-container {
   display: flex;
   align-items: center;
   margin-left: 2em;
+  margin-right: 2em;
   margin-top: 1em;
   gap: 1em;
 }
@@ -177,7 +182,7 @@ a {
 
 .single-event {
   width: 400px;
-  height: 420px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -224,4 +229,12 @@ a {
 .btn a {
   color: white;
   font-size: 1rem;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
 }
