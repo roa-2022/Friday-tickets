@@ -1,9 +1,15 @@
- <div class="event">
-      <h3 class="event-title">{{event_name}}</h3>
-      <p class="event-location">Location: {{location_name}}</p>
-      <p class="event-date">Date: {{date}}</p>
-      <p class="event-price">Price: ${{price}}</p>
-       <p class="event-type">Type: {{type}}</p>
-       <p class="event-description">Description: {{description}}</p>
-           <button><a href="/event/{{id}}/edit">Edit Event</a></button>
+ <div class="event-container">
+    <div class="single-event">
+        <div class="event-title-container">
+            <h3 class="event-title">{{event_name}}</h3>
+        </div>
+        <p class="event-location">Location: {{location_name}}</p>
+        <p class="event-date">Date: {{date}}</p>
+        <p class="event-price">Price: ${{price}}</p>
+        <p class="event-type">Type: {{type}}</p>
+        <p class="event-description">Description: {{description}}</p>
+        <div class="button-container">
+         <button><a href="/event/{{id}}/edit">Edit Event</a></button>
+         </div>
     </div>
+</div>
