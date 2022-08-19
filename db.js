@@ -8,19 +8,20 @@ module.exports = {
   getEventbyId,
   updateEvent,
   addEvent,
+  deleteEvent,
 }
 
 function getEvents(db = connection) {
   return db('events')
   .join('locations','events.location_id','locations.id')
-  .select('*','events.name AS event_name', 'locations.id AS location_id', 'locations.name AS location_name')
+  .select('*','events.name AS event_name', 'events.id AS event_id',  'locations.id AS location_id', 'locations.name AS location_name')
 }
 
 
 function getEventbyId(id, db = connection){
   return db('events')
   .join('locations','events.location_id','locations.id')
-  .select('*','events.name AS event_name', 'locations.id AS location_id', 'locations.name AS location_name')
+  .select('*','events.name AS event_name', 'events.id AS event_id','locations.id AS location_id', 'locations.name AS location_name')
   .where('events.id', id)
   .first()
 }
@@ -53,3 +54,8 @@ function addEvent(eventTitle, eventDate, locationId, eventDescription, eventPric
   })
 }
 
+function deleteEvent(id, db = connection){
+  return db('events')
+  .where('events.id', id)
+  .delete()
+}
