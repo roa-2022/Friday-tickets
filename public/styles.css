@@ -126,7 +126,7 @@ a {
 
 .event {
   width: 300px;
-  height: 300px;
+  height: 350px;
   border: 2px solid black;
   border-radius: 10px;
   display: flex;
@@ -158,6 +158,8 @@ a {
   height: 75px;
   text-align: center;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
   
 }
 .event-title-container input {
@@ -240,3 +242,14 @@ input {
   width: 100%;
 }
 
+
+.locations-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.location {
+  width: 700px;
+}
