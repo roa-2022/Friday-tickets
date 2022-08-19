@@ -3,7 +3,6 @@ const hbs = require('express-handlebars')
 const path = require('path')
 
 const locationRoutes = require('./routes/locations')
-
 const eventRoutes = require('./routes/events')
 
 

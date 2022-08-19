@@ -1,13 +1,17 @@
 <div class="events-container">
     {{#each event}}
     <div class="event">
-      <h3 class="event-title"><a href='/event/{{id}}'>{{event_name}}</a></h3>
+      <h3 class="event-title"><a href='/event/{{event_id}}'>{{event_name}}</a></h3>
       <p class="event-location">Location: {{location_name}}</p>
       <p class="event-date">Date: {{date}}</p>
       <p class="event-price">Price: ${{price}}</p>
        <p class="event-type">Type: {{type}}</p>
     </div>
-
-
   {{/each}}
+
 </div>
+
+<div class="button-container">
+  <button class="btn" name="add" value="Submit"><a href="/events/add">Add Event</a></button>
+</div>
+
