@@ -253,3 +253,9 @@ input {
 .location {
   width: 700px;
 }
+
+.delete-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
