@@ -15,20 +15,22 @@ router.get('/events', (req, res) => {
     })
 })
 
-router.get('/event/add', (req,res)=>{
-  res.render('eventAdd')
+router.get('/events/add', (req,res)=>{
+  db.getAlllocations()
+  .then((locations) => {
+    res.render('eventAdd', {locations})
+  })
 })
 
 
-router.post('/event/add'), (req,res)=>{
-  const { eventTitle, locationId, eventDate, eventDescription} = req.body
-  console.log(eventTitle, locationId, eventDate, eventDescription)
-  db.addEvent(eventTitle, locationId, eventDate, eventDescription)
-  .then(()=> {
+router.post('/events/add', (req,res)=>{
+  const { eventTitle, locationId, eventDate, eventDescription,eventType,eventPrice} = req.body
+  db.addEvent(eventTitle, eventDate, locationId, eventDescription, eventPrice, eventType)
+  .then((addArr)=> {
     res.redirect('/events')
   })
   .catch (err => res.send(err.message))
-}
+})
 
 router.get('/event/:id', (req, res) => {
   db.getEventbyId(req.params.id)

@@ -41,12 +41,15 @@ function updateEvent(id, eventTitle, eventDate, locationId,eventDescription, db 
   .where('events.id', id)
 }
 
-function addEvent(eventTitle, eventDate, locationId,eventDescription, db = connection){
+function addEvent(eventTitle, eventDate, locationId, eventDescription, eventPrice, eventType,db = connection){
   return db('events')
   .insert({
     name: eventTitle,
     location_id: locationId,
     date: eventDate,
-    description: eventDescription 
+    description: eventDescription,
+    price: eventPrice,
+    type:eventType, 
   })
 }
+
