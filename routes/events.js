@@ -60,8 +60,9 @@ router.get('/event/:id/edit', (req, res) => {
 
 router.post('/event/:id/edit', (req, res) => {
     const  { eventTitle, eventDate, locationId,eventDescription } = req.body
+    
     const id = req.params.id
-    console.log(eventTitle, eventDate, locationId,eventDescription)
+    
     return db.updateEvent(id, eventTitle, eventDate, locationId,eventDescription)
     .then(() => {
       res.redirect('/events') 
@@ -70,6 +71,14 @@ router.post('/event/:id/edit', (req, res) => {
   
   })
 
+ router.post('/events/delete', (req,res) =>{
+  const id = Number(req.body.id)
+  
+  db.deleteEvent(id)
+  .then(()=>{
+    res.redirect('/events')
+  })
+ }) 
  
 
 
