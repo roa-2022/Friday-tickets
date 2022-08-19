@@ -1,18 +1,21 @@
 <div class="event-container">
-  <div class="event">
+  <div class="single-event">
     <form action="/location/add" method="POST">
-    <div class="input-container">
+    <div class="event-title-container">
       <label for="eventLocation">Location</label>
       <input type="text" id="name" name="name" placeholder="Location name">
     </div>
 
     <br>
 
-    <div class="input-container">
+    <div class="input-description-container">
         <label for="locationDescription">Location Description: </label>
         <textarea rows="13" type="text" id="locationDescription" name="description">{{description}}</textarea>
    
-    <input type="submit" name="" value="Submit">
+    <div class="button-container ">
+      <button type="submit" >Submit</button>
+    </div>
+
 
     </form>
   </div>

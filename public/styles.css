@@ -196,6 +196,7 @@ a {
 }
 
 .button-container {
+  padding-top: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,3 +239,4 @@ input {
   font-size: 1rem;
   width: 100%;
 }
+
