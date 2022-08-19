@@ -7,7 +7,6 @@ const router = express.Router()
 router.get('/events', (req, res) => {
   db.getEvents()
     .then((events) => {
-      console.log(events)
       res.render('events', { event: events })
     })
     .catch((err) => {
@@ -35,7 +34,6 @@ router.post('/events/add', (req,res)=>{
 router.get('/event/:id', (req, res) => {
   db.getEventbyId(req.params.id)
     .then((event) => {
-      console.log(event)
       res.render('event', event)
     })
     .catch((err) => {
@@ -80,6 +78,16 @@ router.post('/event/:id/edit', (req, res) => {
   })
  }) 
  
+ router.post('/events/ticket', (req,res) =>{
+  const id = Number(req.body.id)
+  db.getEventbyId(id)
+    .then((events) => {
+      res.render('ticket', { event: events })
+    })
+    .catch((err) => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+ })
 
 
 module.exports = router
